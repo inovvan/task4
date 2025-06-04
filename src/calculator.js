@@ -302,6 +302,7 @@ export class Calculator {
       result *= x;
     }
 
+    result = Math.round(result * 1e9) / 1e9;
     this.currentInput = y < 0 ? 1 / result : result;
 
     this.endOfOperation();
