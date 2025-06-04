@@ -1,0 +1,32 @@
+# Task 4 Project
+
+## Task
+
+The task description is available at https://drive.google.com/file/d/15jVnBPXaZrjs99KOUxp4TGq6Inau6xq_/view
+
+## How to run the app
+
+1. Install the required dependencies:
+
+   npm install
+
+2. Build the application (if needed):
+
+   npm run build
+
+3. Start the application in development mode:
+
+   npm start
+
+## Folder Structure and configuration
+
+- `husky/` — configuration for Git hooks.
+- `public/` — static files (HTML, images, etc.).
+- `src/` — source code of the application (styles, logic).
+- `tests/` — test files for checking functionality.
+- `node_modules/` — installed Node.js packages.
+- `package.json` — project metadata and dependencies.
+- `webpack.config.js` — configuration for Webpack bundler.
+- `prettierrc` — configuration for Prettier code formatter.
+- `eslint.config.js` — configuration for ESLint linter.
+- `jest.config.js` — configuration for Jest testing framework.
