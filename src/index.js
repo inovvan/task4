@@ -1,12 +1,14 @@
 import "./style.css";
-import { Calculator } from "./calculator.js";
+import { Calculator } from "./calculator/Calculator.js";
 import { CommandInvoker } from "./invoker.js";
+import { DigitInputCommand } from "./commands/InputCommand.js";
 import {
-  DigitInputCommand,
   OperatorCommand,
   CalculateCommand,
-  ResetCommand,
-  ChangeSignCommand,
+} from "./commands/binaryCommands.js";
+import { ChangeSignCommand } from "./commands/ChangeSignCommand.js";
+import { ResetCommand } from "./commands/ResetCommand.js";
+import {
   FactorialCommand,
   CubeRootCommand,
   CubeCommand,
@@ -14,12 +16,13 @@ import {
   SquareCommand,
   ReciprocalCommand,
   PowerOfTenCommand,
-  ProcentInputCommand,
-  MemoryAddCommand,
-  MemorySubtractCommand,
-  MemoryRecallCommand,
+} from "./commands/unaryCommands.js";
+import {
   MemoryClearCommand,
-} from "./commands.js";
+  MemoryRecallCommand,
+  MemorySubtractCommand,
+  MemoryAddCommand,
+} from "./commands/memoryCommands.js";
 
 const calculator = new Calculator();
 const invoker = new CommandInvoker();
@@ -38,14 +41,11 @@ document.getElementById("buttons").addEventListener("click", (e) => {
     case "digit":
       invoker.executeCommand(new DigitInputCommand(calculator, value));
       break;
-    case "procent":
-      invoker.executeCommand(new ProcentInputCommand(calculator));
-      break;
     case "operator":
       invoker.executeCommand(new OperatorCommand(calculator, value));
       break;
     case "calculate":
-      invoker.executeCommand(new CalculateCommand(calculator, value));
+      invoker.executeCommand(new CalculateCommand(calculator));
       break;
     case "undo":
       invoker.undoCommand();

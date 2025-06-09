@@ -1,4 +1,4 @@
-import { Calculator } from "../src/calculator.js";
+import { Calculator } from "../src/calculator/Calculator.js";
 import { describe, expect, beforeEach, it } from "@jest/globals";
 
 describe("Calculator", () => {
