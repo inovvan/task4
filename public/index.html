@@ -1,9 +1,86 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>task4</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Калькулятор</title>
   </head>
-  <body></body>
+  <body>
+    <div class="calculator">
+      <div class="display">
+        <sup id="root" class="sup"></sup>
+        <span id="display">0</span>
+        <sup id="power" class="sup"></sup>
+      </div>
+      <div class="buttons" id="buttons">
+        <button class="operator" data-type="reset">C</button>
+        <button class="operator cancel" data-type="undo">
+          <img
+            src="./cancel-icon.svg"
+            alt="Cancel icon"
+            width="45"
+            height="45"
+          />
+        </button>
+        <button class="operator" data-type="MC">MC</button>
+        <button class="operator" data-type="M+">M+</button>
+        <button class="operator" data-type="M-">M-</button>
+        <button class="operator" data-type="MR">MR</button>
+
+        <button class="operator" data-type="factorial">x!</button>
+        <button class="operator" data-type="digit" data-value="%">%</button>
+        <button class="operator" data-type="operator" data-value="division">
+          ÷
+        </button>
+        <button
+          class="operator"
+          data-type="operator"
+          data-value="multiplication"
+        >
+          ×
+        </button>
+        <button class="operator" data-type="operator" data-value="minus">
+          −
+        </button>
+        <button class="operator" data-type="operator" data-value="plus">
+          +
+        </button>
+
+        <button class="operator" data-type="cubeRoot">³√x</button>
+        <button class="operator" data-type="cube">x³</button>
+        <button class="num" data-type="digit" data-value="7">7</button>
+        <button class="num" data-type="digit" data-value="8">8</button>
+        <button class="num" data-type="digit" data-value="9">9</button>
+
+        <button class="operator" data-type="squareRoot">√x</button>
+        <button class="operator" data-type="square">x²</button>
+        <button class="num" data-type="digit" data-value="4">4</button>
+        <button class="num" data-type="digit" data-value="5">5</button>
+        <button class="num" data-type="digit" data-value="6">6</button>
+
+        <button class="operator" data-type="operator" data-value="rootY">
+          <sup>ʸ</sup>√x
+        </button>
+        <button class="operator" data-type="operator" data-value="pow">
+          x<sup>ʸ</sup>
+        </button>
+        <button class="num" data-type="digit" data-value="1">1</button>
+        <button class="num" data-type="digit" data-value="2">2</button>
+        <button class="num" data-type="digit" data-value="3">3</button>
+
+        <button class="operator" data-type="reciprocal">1/x</button>
+        <button class="operator" data-type="powerOfTen">10<sup>x</sup></button>
+        <button class="num" data-type="sign">±</button>
+        <button class="num" data-type="digit" data-value="0">0</button>
+        <button class="num" data-type="digit" data-value=".">.</button>
+        <button
+          class="operator high"
+          data-type="calculate"
+          data-value="calculate"
+        >
+          =
+        </button>
+      </div>
+    </div>
+  </body>
 </html>
